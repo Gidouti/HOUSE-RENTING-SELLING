@@ -1,0 +1,138 @@
+body {
+  background-image: url("pic.jpg");
+  background-size: cover;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+li {
+  float: left;
+  position: relative;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  color: white;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  width: 300px;
+}
+
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Unique styles for Add Property Page */
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+/* Unique styles for View Property Page */
+.property-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.property {
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.property img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.property h2 {
+  margin: 0;
+}

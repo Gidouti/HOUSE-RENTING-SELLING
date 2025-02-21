@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Navigation</title>
+  <link rel="stylesheet" href="view.css">
+  <link rel="stylesheet" href="view.js">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="menu-icon" onclick="toggleMenu()">&equiv;</div> <!-- Menu icon -->
+      <h1>DAMAR</h1>
+      <div class="header-right">
+        <input type="text" placeholder="Search..." class="search-bar">
+        <div class="search-icon">&#128269;</div> <!-- Search icon -->
+      </div>
+    </div>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="landing page 2.6.html">Contact Us</a></li>
+      <li><a href="landing page 2.7.html">About</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">Language</a>
+        <div class="dropdown-content">
+          <a href="#">English</a>
+          <a href="#">French</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="main-content">
+      <div class="property-container">
+        <div class="property" data-title="Beautiful Apartment">
+          <img src="image.jpeg" alt="Property Image 1">
+          <h2>Beautiful Apartment</h2>
+          <p>Spacious 2-bedroom apartment in the city center with modern amenities.</p>
+          <p><strong>Location:</strong> New York City</p>
+          <p><strong>Price:</strong> $2,500/month</p>
+        </div>
+
+        <div class="property" data-title="Cozy Cottage">
+          <img src="image2.jpg" alt="Property Image 2">
+          <h2>Cozy Cottage</h2>
+          <p>Charming cottage surrounded by nature, perfect for a weekend getaway.</p>
+          <p><strong>Location:</strong> Asheville, NC</p>
+          <p><strong>Price:</strong> $1,200/month</p>
+        </div>
+
+        <div class="property" data-title="Luxury Villa">
+          <img src="image3.jpg" alt="Property Image 3">
+          <h2>Luxury Villa</h2>
+          <p>Stunning villa with a private pool, located in a tranquil neighborhood.</p>
+          <p><strong>Location:</strong> Los Angeles, CA</p>
+          <p><strong>Price:</strong> $5,000/month</p>
+        </div>
+
+        <div class="property" data-title="Villa">
+          <img src="image4.jpg" alt="Property Image 4">
+          <h2>Villa</h2>
+          <p>Stunning villa with a private pool, located in a tranquil neighborhood.</p>
+          <p><strong>Location:</strong> Los Angeles, CA</p>
+          <p><strong>Price:</strong> $5,000/month</p>
+        </div>
+      </div>
+    </div> <!-- End of main-content -->
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 DAMAR. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active'); // Toggle active class
+    }
+
+    // Close the sidebar when clicking outside of it
+    document.addEventListener('click', function(event) {
+      const sidebar = document.getElementById('sidebar');
+      const menuIcon = document.querySelector('.menu-icon');
+
+      // Check if the click was outside the sidebar and the menu icon
+      if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+        sidebar.classList.remove('active'); // Close the sidebar
+      }
+    });
+
+    c
+
+    // Attach the filter function to the input event of the search bar
+    document.querySelector('.search-bar').addEventListener('input', filterProperties);
+  </script>
+
+</body>
+</html>

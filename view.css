@@ -1,0 +1,221 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F0F4F8;
+  /* Light grayish-blue for the body background */
+  color: #333;
+  /* Darker text for better readability */
+}
+
+header {
+  background-color: #4A90E2;
+  /* Blue color for the header */
+  color: white;
+  /* White text for contrast */
+  padding: 20px;
+  /* Increased padding for a more spacious look */
+  display: flex;
+  /* Use flexbox for layout */
+  align-items: center;
+  /* Center align items vertically */
+}
+
+.header-content {
+  display: flex;
+  /* Flexbox for header content */
+  justify-content: space-between;
+  /* Space between items */
+  width: 100%;
+  /* Full width to ensure alignment */
+}
+
+.menu-icon {
+  cursor: pointer;
+  /* Change cursor to pointer */
+  font-size: 24px;
+  /* Size for the menu icon */
+  color: white;
+  /* Ensure the icon is visible */
+}
+
+.header-title {
+  flex-grow: 1;
+  /* Allow the title to grow and take available space */
+  text-align: center;
+  /* Center align the title text */
+  font-size: 1.5em;
+  /* Adjust font size as needed */
+}
+
+.header-right {
+  display: flex;
+  /* Flexbox for search and icon */
+  align-items: center;
+  /* Center items vertically */
+}
+
+.search-bar {
+  padding: 8px;
+  /* Padding for the search bar */
+  border: none;
+  /* Remove border */
+  border-radius: 4px;
+  /* Rounded corners */
+  margin-right: 10px;
+  /* Space between search bar and search icon */
+  width: 200px;
+  /* Default width */
+  max-width: 100%;
+  /* Responsive max width */
+  box-sizing: border-box;
+  /* Include padding in width */
+}
+
+.search-icon {
+  font-size: 20px;
+  /* Size for the search icon */
+  cursor: pointer;
+  /* Change cursor to pointer */
+}
+
+.sidebar {
+  position: fixed;
+  /* Fix the position of the sidebar */
+  top: 0;
+  left: -250px;
+  /* Initially hidden */
+  width: 250px;
+  /* Width of the sidebar */
+  height: 100%;
+  /* Full height */
+  background-color: #FFFFFF;
+  /* Background color */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  /* Shadow for depth */
+  transition: left 0.3s ease;
+  /* Smooth transition */
+  z-index: 1000;
+  /* Ensure it appears above other elements */
+}
+
+.sidebar.active {
+  left: 0;
+  /* Slide in when active */
+}
+
+.nav-menu {
+  list-style-type: none;
+  /* Remove list styles */
+  padding: 20px;
+  /* Padding for the menu */
+  margin: 0;
+  /* Remove margin */
+}
+
+.nav-menu li {
+  margin: 10px 0;
+  /* Margin between items */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  /* Remove underline */
+  color: #333;
+  /* Text color */
+  padding: 10px;
+  /* Padding for clickable area */
+  display: block;
+  /* Full width clickable area */
+}
+
+.nav-menu a:hover {
+  background-color: #f1f1f1;
+  /* Light gray on hover */
+}
+
+.content {
+  margin-left: 0;
+  /* Default margin */
+  transition: margin-left 0.3s ease;
+  /* Smooth transition for content shift */
+}
+
+.sidebar.active+.content {
+  margin-left: 250px;
+  /* Shift content when sidebar is active */
+}
+
+.property-container {
+  display: flex;
+  /* Use Flexbox for horizontal layout */
+  overflow-x: auto;
+  /* Enable horizontal scrolling if needed */
+  padding: 20px;
+  /* Padding around the container */
+  gap: 20px;
+  /* Space between property cards */
+}
+
+.property {
+  background-color: white;
+  /* White background for property cards */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Shadow for depth */
+  overflow: hidden;
+  /* Hide overflow */
+  width: 300px;
+  /* Fixed width for each property card */
+  min-height: 400px;
+  /* Ensure a minimum height for each card */
+  transition: transform 0.2s;
+  /* Smooth scaling effect */
+  padding: 15px;
+  /* Padding inside the card */
+  text-align: center;
+  /* Center text */
+}
+
+.property:hover {
+  transform: scale(1.05);
+  /* Scale effect on hover */
+}
+
+.property img {
+  border-radius: 8px;
+  /* Rounded corners for images */
+  max-width: 100%;
+  /* Ensure image scales correctly */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.property h2 {
+  margin: 10px 0;
+  /* Margin for the title */
+  font-size: 1.5em;
+  /* Title size */
+  color: #4A90E2;
+  /* Color for titles */
+}
+
+.property p {
+  margin: 10px 0;
+  /* Margin for description */
+  color: #666;
+  /* Lighter text for descriptions */
+}
+
+footer {
+  background-color: #4A90E2;
+  /* Match footer with header */
+  color: white;
+  /* White text for contrast */
+  text-align: center;
+  /* Center align text */
+  padding: 20px 0;
+  /* Vertical padding */
+}
